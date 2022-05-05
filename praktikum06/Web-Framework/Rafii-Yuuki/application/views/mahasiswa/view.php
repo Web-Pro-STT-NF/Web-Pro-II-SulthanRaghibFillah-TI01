@@ -5,7 +5,7 @@
          <div class="container-fluid">
              <div class="row mb-2">
                  <div class="col-sm-6">
-                     <h1><b>Blank Page</b></h1>
+                     <h1><b>Data Mahasiswa</b></h1>
                  </div>
                  <div class="col-sm-6">
                      <ol class="breadcrumb float-sm-right">
@@ -23,10 +23,18 @@
          <!-- Default box -->
          <div class="card">
              <div class="card-header">
-                 <h3 class="card-title"><b>Title</b></h3>
+                 <h3 class="card-title"><b>Mahasiswa</b></h3>
              </div>
              <div class="card-body">
-                 Start in Here!
+                 NIM : <?= $mhs->nim ?>
+                 <br>
+                 Nama Lengkap : <?= $mhs->nama ?>
+                 <br>
+                 Program Studi : <?= $mhs->prodi ?>
+                 <br>
+                 IPK : <?= $mhs->ipk ?>
+                 <br>
+                 Predikat : <?= $mhs->predikat() ?>
              </div>
              <!-- /.card-body -->
              <div class="card-footer">
