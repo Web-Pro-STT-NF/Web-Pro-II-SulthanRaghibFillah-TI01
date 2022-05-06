@@ -1,6 +1,6 @@
 ## Tutorial Instalasinya
 
-https://www.niagahoster.co.id/blog/cara-install-composer/
+<a href="https://www.niagahoster.co.id/blog/cara-install-composer/">Klik disini</a>
 
 ### ini contoh jika berhasil
 cek dengan ketikan pada CMD "composer"
