@@ -30,6 +30,12 @@
                  <br>
                  Nama Lengkap : <?= $mhs->nama ?>
                  <br>
+                 Jenik Kelamin : <?= $mhs->jenis_kelamin ?>
+                 <br>
+                 Tempat Lahir : <?= $mhs->tmp_lahir ?>
+                 <br>
+                 Tanggal Lahir : <?= $mhs->tgl_lahir ?>
+                 <br>
                  Program Studi : <?= $mhs->prodi ?>
                  <br>
                  IPK : <?= $mhs->ipk ?>

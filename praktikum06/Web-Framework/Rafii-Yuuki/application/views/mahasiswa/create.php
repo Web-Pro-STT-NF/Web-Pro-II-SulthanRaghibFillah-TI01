@@ -65,27 +65,26 @@
                      </div>
                  </div>
                  <div class="form-group row">
-                     <label for="tmp_lhr" class="col-form-label">Tempat Lahir</label>
-
+                     <label for="tmp_lahir" class="col-form-label">Tempat Lahir</label>
                      <div class="input-group">
                          <div class="input-group-prepend">
                              <div class="input-group-text">
                                  <i class="fa fa-adn"></i>
                              </div>
                          </div>
-                         <input id="tmp_lhr" name="tmp_lhr" placeholder="Masukkan Kota Lahir Anda" type="text" class="form-control">
+                         <input id="tmp_lahir" name="tmp_lahir" placeholder="Masukkan Kota Lahir Anda" type="text" class="form-control">
                      </div>
 
                  </div>
                  <div class="form-group row">
-                     <label for="tgl_lhr" class="col-form-label">Tanggal Lahir</label>
+                     <label for="tgl_lahir" class="col-form-label">Tanggal Lahir</label>
                      <div class="input-group">
                          <div class="input-group-prepend">
                              <div class="input-group-text">
                                  <i class="fa fa-calendar"></i>
                              </div>
                          </div>
-                         <input id="tgl_lhr" name="tgl_lhr" placeholder="Masukkan Tanggal Lahir Anda" type="date" class="form-control">
+                         <input id="tgl_lahir" name="tgl_lahir" placeholder="Masukkan Tanggal Lahir Anda" type="date" class="form-control">
                      </div>
                  </div>
 
