@@ -108,7 +108,7 @@
                                  <i class="fa fa-graduation-cap"></i>
                              </div>
                          </div>
-                         <input id="ipk" name="ipk" placeholder="Masukkan IPK Anda" type="text" class="form-control">
+                         <input id="ipk" name="ipk" placeholder="Masukkan IPK Anda" type="text" class="form-control" pattern="[0-9]+([,\.][0-9]+)?" autocomplete="off" title="Mohon Masukan angka desimal, contoh = 36.4">
                      </div>
                  </div>
 
