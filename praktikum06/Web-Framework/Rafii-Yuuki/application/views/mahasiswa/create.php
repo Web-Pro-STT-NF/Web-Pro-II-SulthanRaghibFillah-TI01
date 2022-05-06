@@ -90,13 +90,19 @@
 
                  <div class="form-group row">
                      <label for="prodi" class="col-form-label">Prodi Studi</label>
-
-                     <select id="prodi" name="prodi" class="custom-select">
-                         <option value="Silahkan pilih Prodi Anda">Silahkan pilih Prodi Anda</option>
-                         <option value="Teknik Informatika">Teknik Informatika</option>
-                         <option value="Sistem Informasi">Sistem Informasi</option>
-                         <option value="Bisnis Digital">Bisnis Digital</option>
-                     </select>
+                     <div class="input-group">
+                         <div class="input-group-prepend">
+                             <div class="input-group-text">
+                                 <i class="fa fa-graduation-cap"></i>
+                             </div>
+                         </div>
+                         <select id="prodi" name="prodi" class="custom-select">
+                             <option value="Silahkan pilih Prodi Anda">Silahkan pilih Prodi Anda</option>
+                             <option value="Teknik Informatika">Teknik Informatika</option>
+                             <option value="Sistem Informasi">Sistem Informasi</option>
+                             <option value="Bisnis Digital">Bisnis Digital</option>
+                         </select>
+                     </div>
                  </div>
 
                  <div class="form-group row">
