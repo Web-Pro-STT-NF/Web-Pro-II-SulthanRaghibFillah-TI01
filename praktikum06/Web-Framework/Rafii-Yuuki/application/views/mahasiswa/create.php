@@ -21,7 +21,7 @@
      <section class="content">
 
          <!-- Default box -->
-         <div class="card">
+         <div class="card card-primary card-outline">
              <div class="card-header">
                  <h3 class="card-title"><b>Input Your Data</b></h3>
              </div>
@@ -69,7 +69,7 @@
                      <div class="input-group">
                          <div class="input-group-prepend">
                              <div class="input-group-text">
-                                 <i class="fa fa-adn"></i>
+                                 <i class="fa-solid fa-city"></i>
                              </div>
                          </div>
                          <input id="tmp_lahir" name="tmp_lahir" placeholder="Masukkan Kota Lahir Anda" type="text" class="form-control">
@@ -110,10 +110,10 @@
                      <div class="input-group">
                          <div class="input-group-prepend">
                              <div class="input-group-text">
-                                 <i class="fa fa-graduation-cap"></i>
+                                 <i class="fa-solid fa fa-paragraph"></i>
                              </div>
                          </div>
-                         <input id="ipk" name="ipk" placeholder="Masukkan IPK Anda" type="text" class="form-control" pattern="[0-9]+([,\.][0-9]+)?" autocomplete="off" title="Mohon Masukan angka desimal, contoh = 36.4">
+                         <input id="ipk" name="ipk" placeholder="Masukkan IPK Anda, dari = 0.00 - 4.00" type="text" class="form-control" onchange="this.value = (this.value > 4.00) ? 4.00 : ((this.value < 0) ? 0 : this.value);">
                      </div>
                  </div>
 
@@ -123,10 +123,6 @@
                  <?php echo form_close() ?>
              </div>
              <!-- /.card-body -->
-             <div class="card-footer">
-                 Footer
-             </div>
-             <!-- /.card-footer-->
          </div>
          <!-- /.card -->
 

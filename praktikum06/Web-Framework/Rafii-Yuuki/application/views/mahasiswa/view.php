@@ -21,32 +21,72 @@
      <section class="content">
 
          <!-- Default box -->
-         <div class="card">
+         <div class="card card-primary card-outline">
              <div class="card-header">
-                 <h3 class="card-title"><b>Mahasiswa</b></h3>
+                 <h3 class="card-title"><b>List Mahasiswa</b></h3>
              </div>
              <div class="card-body">
-                 NIM : <?= $mhs->nim ?>
+                 NIM : <?= '<b>' . $mhs->nim . '</b>' ?>
                  <br>
-                 Nama Lengkap : <?= $mhs->nama ?>
+                 Nama Lengkap : <?= '<b>' . ucwords($mhs->nama) . '</b>' ?>
                  <br>
                  Jenik Kelamin : <?= $mhs->jenis_kelamin ?>
                  <br>
-                 Tempat Lahir : <?= $mhs->tmp_lahir ?>
+                 Tempat Lahir : <?= ucwords($mhs->tmp_lahir) ?>
                  <br>
                  Tanggal Lahir : <?= $mhs->tgl_lahir ?>
                  <br>
                  Program Studi : <?= $mhs->prodi ?>
                  <br>
-                 IPK : <?= $mhs->ipk ?>
+                 IPK : <?= '<b>' . $mhs->ipk . '</b>' ?>
                  <br>
-                 Predikat : <?= $mhs->predikat() ?>
+                 Predikat : <?= '<b>' . $mhs->predikat() . '</b>' ?>
              </div>
              <!-- /.card-body -->
-             <div class="card-footer">
-                 Footer
+         </div>
+         <!-- /.card -->
+
+         <!-- Default box -->
+         <div class="card card-primary card-outline">
+             <div class="card-header">
+                 <h3 class="card-title"><b>Tabel Mahasiswa</b></h3>
              </div>
-             <!-- /.card-footer-->
+             <div class="card-body">
+                 <div class="row">
+                     <div class="col-12 table-responsive">
+                         <table class="table table-striped table-hover table-bordered">
+                             <thead class="thead-dark align-center">
+                                 <tr>
+                                     <th style="vertical-align: middle;">No</th>
+                                     <th style="vertical-align: middle;"> NIM</th>
+                                     <th style="vertical-align: middle;">Nama Lengkap</th>
+                                     <th style="vertical-align: middle;">Jenis Kelamin</th>
+                                     <th style="vertical-align: middle;">Tempat Lahir</th>
+                                     <th style="vertical-align: middle;">Tanggal Lahir</th>
+                                     <th style="vertical-align: middle;">Program Studi</th>
+                                     <th style="vertical-align: middle;">IPK</th>
+                                     <th style="vertical-align: middle;">Predikat</th>
+                                </tr>
+                             </thead>
+                             <tbody>
+                                 <?php $nomor = 1; ?>
+                                 <tr>
+                                     <td><?= $nomor ?></td>
+                                     <td><?= $mhs->nim ?></td>
+                                     <td><?= ucwords($mhs->nama) ?></td>
+                                     <td class="text-center"><?= $mhs->jenis_kelamin ?></td>
+                                     <td><?= ucwords($mhs->tmp_lahir) ?></td>
+                                     <td><?= $mhs->tgl_lahir ?></td>
+                                     <td><?= $mhs->prodi ?></td>
+                                     <td><?= '<b>' . $mhs->ipk . '</b>' ?></td>
+                                     <td><?= '<b>' . $mhs->predikat() . '</b>' ?></td>
+                                 </tr>
+                             </tbody>
+                         </table>
+                     </div>
+                 </div>
+             </div>
+             <!-- /.card-body -->
          </div>
          <!-- /.card -->
 
