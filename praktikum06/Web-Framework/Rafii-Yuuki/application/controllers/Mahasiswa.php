@@ -26,13 +26,13 @@ class Mahasiswa extends CI_Controller
         $this->mhs2->ipk = 3.35;
 
         $list_mhs = [$this->mhs1, $this->mhs2];
+        
         $data['list_mhs'] = $list_mhs;
-
         $title['title'] = 'Mahasiswa';
 
         $this->load->view('layout/header', $title);
         $this->load->view('layout/sidebar');
-        $this->load->view('mahasiswa/index');
+        $this->load->view('mahasiswa/index', $data);
         $this->load->view('layout/footer');
     }
 
