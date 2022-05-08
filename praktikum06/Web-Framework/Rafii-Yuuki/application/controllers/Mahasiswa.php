@@ -26,7 +26,7 @@ class Mahasiswa extends CI_Controller
         $this->mhs2->ipk = 3.35;
 
         $list_mhs = [$this->mhs1, $this->mhs2];
-        
+
         $data['list_mhs'] = $list_mhs;
         $title['title'] = 'Mahasiswa';
 
