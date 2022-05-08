@@ -50,6 +50,12 @@
                   <p>CodeIgniter 3.1.13</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="<?= base_url() ?>index.php/dashboard/adminlte" class="nav-link">
+                  <i class="far fa-circle nav-icon text-danger"></i>
+                  <p>AdminLTE 3.1.0</p>
+                </a>
+              </li>
             </ul>
           </li>
           <li class="nav-item">
