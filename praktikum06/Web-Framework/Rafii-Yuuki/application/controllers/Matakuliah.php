@@ -43,9 +43,9 @@ class Matakuliah extends CI_Controller
         $list_mk = [$this->mk1, $this->mk2, $this->mk3, $this->mk4, $this->mk5];
 
         $data['list_mk'] = $list_mk;
-        $title['title'] = 'Matakuliah';
+        $data['title'] = 'Matakuliah';
 
-        $this->load->view('layout/header', $title);
+        $this->load->view('layout/header', $data);
         $this->load->view('layout/sidebar');
         $this->load->view('matakuliah/index', $data);
         $this->load->view('layout/footer');
@@ -53,9 +53,9 @@ class Matakuliah extends CI_Controller
 
     public function create()
     {
-        $title['title'] = 'Form Matakuliah';
+        $data['title'] = 'Form Matakuliah';
 
-        $this->load->view('layout/header', $title);
+        $this->load->view('layout/header', $data);
         $this->load->view('layout/sidebar');
         $this->load->view('matakuliah/create');
         $this->load->view('layout/footer');
@@ -70,10 +70,10 @@ class Matakuliah extends CI_Controller
         $this->mk->kode = $this->input->POST('kode');
         $this->mk->dosen_pengajar = $this->input->POST('dosen_pengajar');
 
-        $title['title'] = 'Data Matakuliah';
+        $data['title'] = 'Data Matakuliah';
         $data['mk'] = $this->mk;
 
-        $this->load->view('layout/header', $title);
+        $this->load->view('layout/header', $data);
         $this->load->view('layout/sidebar');
         $this->load->view('matakuliah/view', $data);
         $this->load->view('layout/footer');

@@ -53,9 +53,9 @@ class Dosen extends CI_Controller
         $list_dsn = [$this->dosen1, $this->dosen2, $this->dosen3, $this->dosen4, $this->dosen5];
         
         $data['list_dsn'] = $list_dsn;
-        $title['title'] = 'Dosen';
+        $data['title'] = 'Dosen';
 
-        $this->load->view('layout/header', $title);
+        $this->load->view('layout/header', $data);
         $this->load->view('layout/sidebar');
         $this->load->view('dosen/index', $data);
         $this->load->view('layout/footer');
@@ -63,9 +63,9 @@ class Dosen extends CI_Controller
 
     public function create()
     {
-        $title['title'] = 'Form Dosen';
+        $data['title'] = 'Form Dosen';
 
-        $this->load->view('layout/header', $title);
+        $this->load->view('layout/header', $data);
         $this->load->view('layout/sidebar');
         $this->load->view('dosen/create');
         $this->load->view('layout/footer');
@@ -82,10 +82,10 @@ class Dosen extends CI_Controller
         $this->dsn->tgl_lahir = $this->input->POST('tgl_lahir');
         $this->dsn->pendidikan_terakhir = $this->input->POST('pend_trakhir');
 
-        $title['title'] = 'Data Dosen';
+        $data['title'] = 'Data Dosen';
         $data['dsn'] = $this->dsn;
 
-        $this->load->view('layout/header', $title);
+        $this->load->view('layout/header', $data);
         $this->load->view('layout/sidebar');
         $this->load->view('dosen/view', $data);
         $this->load->view('layout/footer');

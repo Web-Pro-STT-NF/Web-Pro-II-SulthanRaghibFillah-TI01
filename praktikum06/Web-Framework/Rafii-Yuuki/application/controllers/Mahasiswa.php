@@ -28,9 +28,9 @@ class Mahasiswa extends CI_Controller
         $list_mhs = [$this->mhs1, $this->mhs2];
 
         $data['list_mhs'] = $list_mhs;
-        $title['title'] = 'Mahasiswa';
+        $data['title'] = 'Mahasiswa';
 
-        $this->load->view('layout/header', $title);
+        $this->load->view('layout/header', $data);
         $this->load->view('layout/sidebar');
         $this->load->view('mahasiswa/index', $data);
         $this->load->view('layout/footer');
@@ -38,9 +38,9 @@ class Mahasiswa extends CI_Controller
 
     public function create()
     {
-        $title['title'] = 'Form Mahasiswa';
+        $data['title'] = 'Form Mahasiswa';
 
-        $this->load->view('layout/header', $title);
+        $this->load->view('layout/header', $data);
         $this->load->view('layout/sidebar');
         $this->load->view('mahasiswa/create');
         $this->load->view('layout/footer');
@@ -58,10 +58,10 @@ class Mahasiswa extends CI_Controller
         $this->mhs->prodi = $this->input->POST('prodi');
         $this->mhs->ipk = $this->input->POST('ipk');
 
-        $title['title'] = 'Data Mahasiswa';
+        $data['title'] = 'Data Mahasiswa';
         $data['mhs'] = $this->mhs;
 
-        $this->load->view('layout/header', $title);
+        $this->load->view('layout/header', $data);
         $this->load->view('layout/sidebar');
         $this->load->view('mahasiswa/view', $data);
         $this->load->view('layout/footer');

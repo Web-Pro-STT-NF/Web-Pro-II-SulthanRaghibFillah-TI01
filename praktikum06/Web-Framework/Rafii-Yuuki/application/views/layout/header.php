@@ -7,7 +7,7 @@
   <title>Rafii-Yuuki | <?= $title ?></title>
 
   <!-- Logo Icon -->
-  <link rel="icon" type="image/x-icon" href="<?= base_url() ?>public/dist/img/mahasiswa.png" />
+  <link rel="icon" type="image/x-icon" href="<?= base_url() ?>public/dist/img/rafii-user.jpg" />
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Ionicons -->

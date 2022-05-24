@@ -79,12 +79,6 @@
                   <p>Form Mahasiswa</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="<?= base_url() ?>index.php/mahasiswa/save" class="nav-link">
-                  <i class="far fa-circle nav-icon text-danger"></i>
-                  <p>Data Mahasiswa</p>
-                </a>
-              </li>
             </ul>
           </li>
           <li class="nav-item">
