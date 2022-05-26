@@ -23,7 +23,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'http://localhost:8080/';
+    public $baseURL = 'http://localhost/Web-Pro-II-SulthanRaghibFillah-TI01/praktikum08/dari_ka_fiki/framework-CI-4.1.9/public/';
 
     /**
      * --------------------------------------------------------------------------
