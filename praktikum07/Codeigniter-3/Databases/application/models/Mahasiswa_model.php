@@ -1,14 +1,13 @@
 <?php
 class Mahasiswa_model extends CI_Model
 {
-    public $id;
-    public $nim;
-    public $nama;
-    public $jenis_kelamin;
-    public $prodi;
-    public $tmp_lahir;
-    public $tgl_lahir;
-    public $ipk;
+    private $table = 'mahasiswa';
+
+    public function getAllData()
+    {
+        $query = $this->db->get($this->table);
+        return $query->result();
+    }
 
     public function predikat()
     {

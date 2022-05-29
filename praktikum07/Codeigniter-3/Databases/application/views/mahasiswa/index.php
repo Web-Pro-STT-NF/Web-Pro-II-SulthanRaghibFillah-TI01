@@ -25,8 +25,15 @@
              <div class="card-header">
                  <h3 class="card-title"><b>Mahasiswa</b></h3>
              </div>
+
              <div class="card-body">
                  <div class="row">
+                     <div class="col-12">
+                         <h2>Daftar Mahasiswa STT Terpadu Nurul Fikri</h2>
+                     </div>
+                     <div class="form-group row ml-1">
+                         <button name="submit" type="submit" class="btn btn-primary"><a href="#" class="text-white">Tambah Data Mahasiswa</a></button>
+                     </div>
                      <div class="col-12 table-responsive">
                          <table class="table table-striped table-hover table-bordered">
                              <thead class="thead-dark align-center">
@@ -39,24 +46,20 @@
                                      <th style="vertical-align: middle;">Tanggal Lahir</th>
                                      <th style="vertical-align: middle;">Prodi</th>
                                      <th style="vertical-align: middle;">IPK</th>
-                                     <th style="vertical-align: middle;">Predikat</th>
                                  </tr>
                              </thead>
                              <tbody>
-                                 <?php
-                                    $nomor = 1;
-                                    foreach ($list_mhs as $mhs) :
-                                    ?>
+                                 <?php $nomor = 1; ?>
+                                 <?php foreach ($list_mahasiswa as $mhs) : ?>
                                      <tr>
                                          <td style="vertical-align: middle;"><?= $nomor++ ?></td>
-                                         <td style="vertical-align: middle;"><?= ucwords($mhs->nim) ?></td>
-                                         <td style="vertical-align: middle;"><?= $mhs->nama ?></td>
-                                         <td class="text-center" style="vertical-align: middle;"><?= $mhs->jenis_kelamin ?></td>
+                                         <td style="vertical-align: middle;"><?= $mhs->nim ?></td>
+                                         <td style="vertical-align: middle;"><?= ucwords($mhs->nama) ?></td>
+                                         <td class="text-center" style="vertical-align: middle;"><?= $mhs->gender ?></td>
                                          <td class="text-center" style="vertical-align: middle;"><?= $mhs->tmp_lahir ?></td>
                                          <td class="text-center" style="vertical-align: middle;"><?= $mhs->tgl_lahir ?></td>
-                                         <td style="vertical-align: middle;"><?= $mhs->prodi ?></td>
+                                         <td style="vertical-align: middle;"><?= $mhs->prodi_kode ?></td>
                                          <td style="vertical-align: middle;"><?= '<b>' . $mhs->ipk . '</b>' ?></td>
-                                         <td style="vertical-align: middle;"><?= '<b>' . $mhs->predikat() . '</b>' ?></td>
                                      </tr>
                                  <?php endforeach ?>
                              </tbody>

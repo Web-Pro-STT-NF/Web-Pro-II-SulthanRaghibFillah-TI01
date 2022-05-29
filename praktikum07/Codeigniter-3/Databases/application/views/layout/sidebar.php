@@ -69,8 +69,8 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="<?= base_url() ?>index.php/mahasiswa/index" class="nav-link">
-                  <i class="far fa-circle nav-icon text-info"></i>
-                  <p>Index Mahasiswa</p>
+                  <i class="far fa-solid fa-database nav-icon text-info"></i>
+                  <p>Mahasiswa</p>
                 </a>
               </li>
               <li class="nav-item">

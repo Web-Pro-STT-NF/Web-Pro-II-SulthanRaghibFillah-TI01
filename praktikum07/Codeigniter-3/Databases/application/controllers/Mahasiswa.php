@@ -5,30 +5,11 @@ class Mahasiswa extends CI_Controller
 {
     public function index()
     {
-        $this->load->model('mahasiswa_model', 'mhs1');
-        $this->mhs1->id = 1;
-        $this->mhs1->nim = "011022101";
-        $this->mhs1->nama = "Faiz Fikri";
-        $this->mhs1->jenis_kelamin = "L";
-        $this->mhs1->tmp_lahir = "Jakarta";
-        $this->mhs1->tgl_lahir = "2001-05-21";
-        $this->mhs1->prodi = "Sistem Informasi";
-        $this->mhs1->ipk = 3.85;
-
-        $this->load->model('mahasiswa_model', 'mhs2');
-        $this->mhs2->id = 2;
-        $this->mhs2->nim = "011022102";
-        $this->mhs2->nama = "Pandan Wangi";
-        $this->mhs2->jenis_kelamin = "P";
-        $this->mhs2->tmp_lahir = "Bogor";
-        $this->mhs2->tgl_lahir = "2002-09-16";
-        $this->mhs2->prodi = "Teknik Informatika";
-        $this->mhs2->ipk = 3.35;
-
-        $list_mhs = [$this->mhs1, $this->mhs2];
-
-        $data['list_mhs'] = $list_mhs;
         $data['title'] = 'Mahasiswa';
+
+        $this->load->model('Mahasiswa_model', 'mahasiswa');
+        $list_mahasiswa = $this->mahasiswa->getAllData();
+        $data['list_mahasiswa'] = $list_mahasiswa;
 
         $this->load->view('layout/header', $data);
         $this->load->view('layout/sidebar');
