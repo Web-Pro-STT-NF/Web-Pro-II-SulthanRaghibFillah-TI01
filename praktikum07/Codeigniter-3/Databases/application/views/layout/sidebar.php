@@ -83,6 +83,23 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
+              <i class="nav-icon fa-solid fa-computer"></i>
+              <p>
+                Program Studi
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?= base_url() ?>index.php/prodi/index" class="nav-link">
+                  <i class="far fa-solid fa-database nav-icon text-info"></i>
+                  <p>Prodi</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
               <i class="nav-icon fa-solid fa-graduation-cap"></i>
               <p>
                 Dosen
