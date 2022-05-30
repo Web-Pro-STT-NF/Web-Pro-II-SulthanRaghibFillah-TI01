@@ -49,8 +49,8 @@
                                     ?>
                                      <tr>
                                          <td style="vertical-align: middle;"><?= $nomor++ ?></td>
-                                         <td style="vertical-align: middle;"><?= ucwords($mhs->nim) ?></td>
-                                         <td style="vertical-align: middle;"><?= $mhs->nama ?></td>
+                                         <td style="vertical-align: middle;"><?= $mhs->nim ?></td>
+                                         <td style="vertical-align: middle;"><?= ucwords($mhs->nama) ?></td>
                                          <td class="text-center" style="vertical-align: middle;"><?= $mhs->jenis_kelamin ?></td>
                                          <td class="text-center" style="vertical-align: middle;"><?= $mhs->tmp_lahir ?></td>
                                          <td class="text-center" style="vertical-align: middle;"><?= $mhs->tgl_lahir ?></td>
