@@ -117,23 +117,6 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fa-solid fa-book-open-reader"></i>
-              <p>
-                Mata Kuliah
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="<?= base_url() ?>index.php/matakuliah/index" class="nav-link">
-                  <i class="far fa-circle nav-icon text-info"></i>
-                  <p>Index Matakuliah</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
               <i class="nav-icon fa-solid fa-user"></i>
               <p>
                 My Info Profile
