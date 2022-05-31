@@ -44,9 +44,10 @@
                     <div class="form-group mt-3">
                         <label for="prodi">Program Studi</label>
                         <select class="form-select" name="prodi" id="prodi">
-                            <option value="">Pilih Jenis Kelamin</option>
-                            <option value="L">Laki-Laki</option>
-                            <option value="P">Pertemuan</option>
+                            <option value="">Pilih Program Studi Anda</option>
+                            <option value="Teknik Informatik">Teknik Informatik</option>
+                            <option value="Sistem Informasi">Sistem Informasi</option>
+                            <option value="Bisnis Digital">Bisnis Digital</option>
                         </select>
                     </div>
                     <div class="form-group mt-3">
