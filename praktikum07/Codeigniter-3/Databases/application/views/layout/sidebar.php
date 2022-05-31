@@ -109,8 +109,8 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="<?= base_url() ?>index.php/dosen/index" class="nav-link">
-                  <i class="far fa-circle nav-icon text-info"></i>
-                  <p>Index Dosen</p>
+                  <i class="far fa-solid fa-database nav-icon text-info"></i>
+                  <p>Dosen</p>
                 </a>
               </li>
             </ul>
