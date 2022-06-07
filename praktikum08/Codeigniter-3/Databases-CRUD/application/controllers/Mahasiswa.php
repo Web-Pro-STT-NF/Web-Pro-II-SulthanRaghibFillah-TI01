@@ -52,6 +52,8 @@ class Mahasiswa extends CI_Controller
         $tgl_lahir = $this->input->post('tgl_lahir');
         $prodi = $this->input->post('prodi');
         $ipk = $this->input->post('ipk');
+        //hidden field
+        $idedit = $this->input->post('idedit');
 
         $data_mhs[] = $nim; // ? 1
         $data_mhs[] = $nama; // ? 2
@@ -61,8 +63,34 @@ class Mahasiswa extends CI_Controller
         $data_mhs[] = $prodi; // ? 6
         $data_mhs[] = $ipk; // ? 7
 
-        // panggil fungsi save di model
-        $this->mahasiswa->save($data_mhs);
+        if (isset($idedit)) {
+            // update data lama
+            $data_mhs[] = $idedit; // ? 8
+            $this->mahasiswa->update($data_mhs);
+        } else {
+            // save data baru
+            // panggil fungsi save di model
+            $this->mahasiswa->save($data_mhs);
+        }
+
         redirect(base_url() . 'index.php/mahasiswa/detail?id=' . $nim, 'refresh');
     }
+
+    public function edit()
+    {
+        $this->load->model('mahasiswa_model', 'mahasiswa');
+
+        $id = $this->input->get('id');
+
+        $mhsedit = $this->mahasiswa->findMasisById($id);
+
+        $data['title'] = 'Edit Mahasiswa';
+        $data['mhsedit'] = $mhsedit;
+
+        $this->load->view('layout/header', $data);
+        $this->load->view('layout/sidebar');
+        $this->load->view('mahasiswa/update', $data);
+        $this->load->view('layout/footer');
+    }
+
 }

@@ -55,7 +55,10 @@
                                          <td style="vertical-align: middle;"><?= ucwords($mhs->nama) ?></td>
                                          <td class="text-center" style="vertical-align: middle;"><?= $mhs->gender ?></td>
                                          <td style="vertical-align: middle;"><?= $mhs->prodi_kode ?></td>
-                                         <td style="vertical-align: middle;"><a href="detail?id=<?= $mhs->nim ?>"><i class="fa-solid fa-eye pr-1"></i>View</a></td>
+                                         <td style="vertical-align: middle;">
+                                             <a href="detail?id=<?= $mhs->nim ?>" class="pr-2"><i class="fa-solid fa-eye pr-1"></i>View</a>
+                                             <a href="edit?id=<?= $mhs->nim ?>" class="pr-2"><i class="fa-solid fa-file-pen pr-1"></i>Edit</a>
+                                         </td>
                                      </tr>
                                  <?php endforeach ?>
                              </tbody>

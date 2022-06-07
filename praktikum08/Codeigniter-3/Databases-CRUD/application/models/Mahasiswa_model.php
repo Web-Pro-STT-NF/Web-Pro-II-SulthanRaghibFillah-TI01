@@ -25,6 +25,20 @@ class Mahasiswa_model extends CI_Model
         $sql = "INSERT INTO mahasiswa (nim, nama, gender, tmp_lahir, tgl_lahir, prodi_kode, ipk) VALUES (?, ?, ?, ?, ?, ?, ?)";
         $this->db->query($sql, $data);
     }
+    
+    public function update($data)
+    {
+        // UPDATE data
+        $sql = "UPDATE mahasiswa SET 
+        nim = ?, 
+        nama = ?,
+        gender = ?,
+        tmp_lahir = ?,
+        tgl_lahir = ?,
+        prodi_kode = ?,
+        ipk = ? WHERE nim = ?";
+        $this->db->query($sql, $data);
+    }
 
     public function predikat()
     {
