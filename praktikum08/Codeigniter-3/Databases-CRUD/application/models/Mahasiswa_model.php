@@ -40,6 +40,13 @@ class Mahasiswa_model extends CI_Model
         $this->db->query($sql, $data);
     }
 
+    public function delete($id)
+    {
+        // DELETE FROM mahasiswa WHERE nim = $id;
+        $sql = "DELETE FROM mahasiswa WHERE nim = ?";
+        $this->db->query($sql, array($id));
+    }
+
     public function predikat()
     {
         $predikat = ($this->ipk >= 3.75) ? "Cumlaude" : "Baik";
