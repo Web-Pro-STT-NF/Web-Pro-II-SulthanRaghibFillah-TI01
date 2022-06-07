@@ -98,9 +98,9 @@
                          </div>
                          <select id="prodi" name="prodi" class="custom-select">
                              <option value="Silahkan pilih Prodi Anda">Silahkan pilih Prodi Anda</option>
-                             <option value="Teknik Informatika">Teknik Informatika</option>
-                             <option value="Sistem Informasi">Sistem Informasi</option>
-                             <option value="Bisnis Digital">Bisnis Digital</option>
+                             <option value="TI">Teknik Informatika</option>
+                             <option value="SI">Sistem Informasi</option>
+                             <option value="BD">Bisnis Digital</option>
                          </select>
                      </div>
                  </div>

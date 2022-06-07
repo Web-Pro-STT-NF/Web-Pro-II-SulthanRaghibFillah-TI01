@@ -32,7 +32,7 @@
                          <h2>Daftar Mahasiswa STT Terpadu Nurul Fikri</h2>
                      </div>
                      <div class="form-group row ml-1">
-                         <button name="submit" type="submit" class="btn btn-primary"><a href="#" class="text-white">Tambah Data Mahasiswa</a></button>
+                         <button name="submit" type="submit" class="btn btn-primary"><a href="create" class="text-white">Tambah Data Mahasiswa</a></button>
                      </div>
                      <div class="col-12 table-responsive">
                          <table class="table table-hover table-bordered">

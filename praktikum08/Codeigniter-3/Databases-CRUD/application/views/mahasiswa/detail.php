@@ -23,13 +23,13 @@
        <!-- Default box -->
        <div class="card card-primary card-outline">
           <div class="card-header">
-             <h3 class="card-title"><b>Mahasiswa <?= $mahasiswa->nama ?></b></h3>
+             <h3 class="card-title"><b>Mahasiswa, <?= ucwords($mahasiswa->nama) ?></b></h3>
           </div>
 
           <div class="card-body">
              <div class="row">
                 <div class="col-12">
-                   <h2>Detail</h2>
+                   <h2>Biodata</h2>
                 </div>
                 <div class="col-12 table-responsive">
                    <table>
@@ -39,7 +39,7 @@
                       </tr>
                       <tr>
                          <td>Nama</td>
-                         <td>: <?= $mahasiswa->nama ?></td>
+                         <td>: <?= ucwords($mahasiswa->nama) ?></td>
                       </tr>
                       <tr>
                          <td>Jenis Kelamin</td>
@@ -47,7 +47,7 @@
                       </tr>
                       <tr>
                          <td>Tempat Lahir</td>
-                         <td>: <?= $mahasiswa->tmp_lahir ?></td>
+                         <td>: <?= ucwords($mahasiswa->tmp_lahir) ?></td>
                       </tr>
                       <tr>
                          <td>Tanggal Lahir</td>
