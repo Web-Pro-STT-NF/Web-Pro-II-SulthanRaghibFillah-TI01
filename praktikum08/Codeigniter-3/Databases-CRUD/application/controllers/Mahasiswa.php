@@ -17,6 +17,20 @@ class Mahasiswa extends CI_Controller
         $this->load->view('layout/footer');
     }
 
+    public function detail()
+    {
+        $data['title'] = 'Detail Mahasiswa';
+
+        $this->load->model('Mahasiswa_model', 'mahasiswa');
+        $nim = $this->input->get('id');
+        $data['mahasiswa'] = $this->mahasiswa->findMasisById($nim);
+
+        $this->load->view('layout/header', $data);
+        $this->load->view('layout/sidebar');
+        $this->load->view('mahasiswa/detail', $data);
+        $this->load->view('layout/footer');
+    }
+
     public function create()
     {
         $data['title'] = 'Form Mahasiswa';
@@ -44,7 +58,7 @@ class Mahasiswa extends CI_Controller
 
         $this->load->view('layout/header', $data);
         $this->load->view('layout/sidebar');
-        $this->load->view('mahasiswa/view', $data);
+        $this->load->view('mahasiswa/save', $data);
         $this->load->view('layout/footer');
     }
 }

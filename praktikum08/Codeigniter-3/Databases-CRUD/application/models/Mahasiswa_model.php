@@ -10,6 +10,14 @@ class Mahasiswa_model extends CI_Model
         return $query->result();
     }
 
+    public function findMasisById($id)
+    {
+        // select * from mahasiswa where nim = $id;
+        $this->db->where('nim', $id);
+        $query = $this->db->get($this->table_mahsiswa);
+        return $query->row();
+    }
+
     public function predikat()
     {
         $predikat = ($this->ipk >= 3.75) ? "Cumlaude" : "Baik";

@@ -35,17 +35,15 @@
                          <button name="submit" type="submit" class="btn btn-primary"><a href="#" class="text-white">Tambah Data Mahasiswa</a></button>
                      </div>
                      <div class="col-12 table-responsive">
-                         <table class="table table-striped table-hover table-bordered">
+                         <table class="table table-hover table-bordered">
                              <thead class="thead-dark align-center">
                                  <tr>
                                      <th style="vertical-align: middle;">No</th>
                                      <th style="vertical-align: middle;">NIM</th>
                                      <th style="vertical-align: middle;">Nama</th>
                                      <th style="vertical-align: middle;">Jenis Kelamin</th>
-                                     <th style="vertical-align: middle;">Tempat Lahir</th>
-                                     <th style="vertical-align: middle;">Tanggal Lahir</th>
                                      <th style="vertical-align: middle;">Prodi</th>
-                                     <th style="vertical-align: middle;">IPK</th>
+                                     <th style="vertical-align: middle;">Action</th>
                                  </tr>
                              </thead>
                              <tbody>
@@ -56,10 +54,8 @@
                                          <td style="vertical-align: middle;"><?= $mhs->nim ?></td>
                                          <td style="vertical-align: middle;"><?= ucwords($mhs->nama) ?></td>
                                          <td class="text-center" style="vertical-align: middle;"><?= $mhs->gender ?></td>
-                                         <td class="text-center" style="vertical-align: middle;"><?= $mhs->tmp_lahir ?></td>
-                                         <td class="text-center" style="vertical-align: middle;"><?= $mhs->tgl_lahir ?></td>
                                          <td style="vertical-align: middle;"><?= $mhs->prodi_kode ?></td>
-                                         <td style="vertical-align: middle;"><?= '<b>' . $mhs->ipk . '</b>' ?></td>
+                                         <td style="vertical-align: middle;"><a href="detail?id=<?= $mhs->nim ?>"><i class="fa-solid fa-eye pr-1"></i>View</a></td>
                                      </tr>
                                  <?php endforeach ?>
                              </tbody>
