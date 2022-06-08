@@ -58,7 +58,7 @@
                                          <td style="vertical-align: middle;">
                                              <a href="detail?id=<?= $mhs->nim ?>" class="pr-2"><i class="fa-solid fa-eye pr-1"></i>View</a>
                                              <a href="edit?id=<?= $mhs->nim ?>" class="pr-2"><i class="fa-solid fa-file-pen pr-1"></i>Edit</a>
-                                             <a href="delete?id=<?= $mhs->nim ?>" class="pr-2" onclick="if(!confirm('Anda Yakin Menghapus Data Mahasiswa Bernama, <?= $mhs->nama ?> ?')) {retrun false}">
+                                             <a href="delete?id=<?= $mhs->nim ?>" class="pr-2" onclick="if(!confirm('Anda Yakin Menghapus Data Mahasiswa Bernama, <?= $mhs->nama ?> ?')) {return false}">
                                                  <i class="fa-solid fa-trash pr-1"></i>Delete
                                              </a>
                                          </td>
