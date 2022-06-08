@@ -6,10 +6,4 @@
 | > "php spark make:model Mahasiswa"
 | #note tanpa petik
 |----------------------------------------------------------------------
-| Cara mengimport data dibawah yang sudah dibuat ke table pada databases
-|----------------------------------------------------------------------
-| jalankan perintah dibawah ini pada terminal
-| > "php spark db:seed MahasiswaSeeder"
-| #note tanpa petik
-|----------------------------------------------------------------------
 */
