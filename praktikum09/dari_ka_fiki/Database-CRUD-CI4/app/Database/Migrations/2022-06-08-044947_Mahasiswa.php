@@ -6,7 +6,7 @@ use CodeIgniter\Database\Migration;
 
 class Mahasiswa extends Migration
 {
-    public function up()
+    public function up() // up menambahkan kolom field ke tabel mahasiswa
     {
         $this->forge->addField([
             'id'                    => [
@@ -58,8 +58,8 @@ class Mahasiswa extends Migration
         $this->forge->createTable('mahasiswa');
     }
 
-    public function down()
+    public function down() // menghapus tabel
     {
-        //
+        $this->forge->dropTable('mahasiswa');
     }
 }
