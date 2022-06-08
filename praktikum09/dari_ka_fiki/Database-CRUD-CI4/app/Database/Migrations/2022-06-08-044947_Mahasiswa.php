@@ -42,7 +42,7 @@ class Mahasiswa extends Migration
                 'type'              => 'VARCHAR',
                 'constraint'        => '5'
             ],
-            'creaeted_at'           => [ //diisi oleh system
+            'created_at'           => [ //diisi oleh system
                 'type'              => 'TIMESTAMP',
                 'null'              => true,
                 'on update'         => 'NOW()'
