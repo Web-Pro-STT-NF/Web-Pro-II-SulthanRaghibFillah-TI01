@@ -1,0 +1,9 @@
+/*
+|--------------------------------------------------------------------
+| Cara membuat Controller Mahasiswa
+|--------------------------------------------------------------------
+| jalankan perintah dibawah ini pada terminal  
+| > "php spark make:controller Mahasiswa"
+| #note tanpa petik
+|--------------------------------------------------------------------
+*/
