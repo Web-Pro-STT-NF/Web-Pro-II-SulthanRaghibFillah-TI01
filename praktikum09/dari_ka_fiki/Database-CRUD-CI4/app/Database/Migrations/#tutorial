@@ -1,0 +1,32 @@
+/*
+|-------------------------------------------------------------- 
+| Cara membuat Migration Mahasiswa 
+|--------------------------------------------------------------------------
+| jalankan perintah dibawah ini pada terminal  
+| > "php spark migrate:create Mahasiswa"
+| #note tanpa petik
+|--------------------------------------------------------------------------
+| Next Step
+|---------------------------------------------------------------------------
+| 1. buat database, disini saya buat nama db_koperasi
+| 2. koneksikan database dari phpmyadmin ke folder CI anda, dengan cara
+| 3. rubah folder "env" pada folder CI anda menjadi ".env"
+|    #note tanpa petik
+| 4. buka folder .env dan pada tag #Database rubahlah sesuai database anda
+|       database.default.hostname = localhost
+|       database.default.database = db_mahasiswa
+|       database.default.username = root
+|       database.default.password = 
+|       database.default.DBDriver = MySQLi
+|       database.default.DBPrefix =
+|------------------------------------------------------------------------------
+| Cara menjalankan Migration Mahasiswa atau mengimport table yg sudah 
+| dibuat dibawah ini kedalam db_mahasiswa  
+|------------------------------------------------------------------------------
+| jalankan perintah dibawah ini pada terminal  
+| > "php spark migrate"
+| #note tanpa petik
+| #pastikan sebelum menjalankan ekstension=mysql; pada intl sudah enable
+|  tanda sudah enable adalah tidak ada ; diawal
+|-------------------------------------------------------------------------------
+*/
