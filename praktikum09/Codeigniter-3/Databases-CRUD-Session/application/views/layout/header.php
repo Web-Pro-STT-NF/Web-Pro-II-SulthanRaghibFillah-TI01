@@ -1,7 +1,7 @@
-<?php 
-if(!$this->session->has_userdata('USERNAME')){
+<?php
+if (!$this->session->has_userdata('USERNAME')) {
   // diwajibkan login dahulu
-  redirect(base_url().'index.php/login');
+  redirect(base_url() . 'index.php/login');
 }
 ?>
 <!DOCTYPE html>
@@ -85,6 +85,9 @@ if(!$this->session->has_userdata('USERNAME')){
             <i class="fas fa-th-large"></i>
           </a>
         </li>
+        <a role="button" class="btn btn-outline-primary" href="<?= base_url() ?>index.php/login/logout">
+          <i class="fa-solid fa-right-from-bracket pr-1"></i>Logout
+        </a>
       </ul>
     </nav>
     <!-- /.navbar -->
