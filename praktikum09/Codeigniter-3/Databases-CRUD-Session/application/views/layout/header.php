@@ -1,3 +1,9 @@
+<?php 
+if(!$this->session->has_userdata('USERNAME')){
+  // diwajibkan login dahulu
+  redirect(base_url().'index.php/login');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
