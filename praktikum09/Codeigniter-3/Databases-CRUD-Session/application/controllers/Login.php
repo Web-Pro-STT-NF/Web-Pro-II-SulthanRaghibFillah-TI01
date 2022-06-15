@@ -35,4 +35,13 @@ class Login extends CI_Controller
             redirect(base_url() . 'index.php/login?status=gagal');
         }
     }
+
+    public function logout()
+    {
+        $this->session->unset_userdata('USERNAME');
+        $this->session->unset_userdata('ROLE');
+        $this->session->unset_userdata('USER');
+
+        redirect(base_url().'index.php/login');
+    }
 }
