@@ -14,7 +14,14 @@
           <img src="<?= base_url('public/dist/img/rafii-user.jpg') ?>" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Sulthan Raghib Fillah</a>
+          <a href="#" class="d-block">
+            <?php
+            if ($this->session->has_userdata('USERNAME')) {
+              echo $this->session->userdata('USERNAME');
+              echo ' - ' . $this->session->userdata('ROLE');
+            }
+            ?>
+          </a>
         </div>
       </div>
 
