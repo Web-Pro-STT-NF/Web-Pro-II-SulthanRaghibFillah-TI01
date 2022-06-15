@@ -31,7 +31,11 @@
                          <h2>Daftar Program Studi STT Terpadu Nurul Fikri</h2>
                      </div>
                      <div class="form-group row ml-1">
-                         <button name="submit" type="submit" class="btn btn-primary"><a href="#" class="text-white">Tambah Data Prodi</a></button>
+                         <?php if ($this->session->userdata('ROLE') == 'ADMIN') { ?>
+                             <button name="submit" type="submit" class="btn btn-primary">
+                                 <a href="#" class="text-white">Tambah Data Prodi</a>
+                             </button>
+                         <?php } ?>
                      </div>
                      <div class="col-12 table-responsive">
                          <table class="table table-striped table-hover table-bordered">

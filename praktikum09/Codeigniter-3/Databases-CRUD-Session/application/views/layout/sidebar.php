@@ -80,12 +80,14 @@
                   <p>Mahasiswa</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="<?= base_url() ?>index.php/mahasiswa/create" class="nav-link">
-                  <i class="far fa-circle nav-icon text-warning"></i>
-                  <p>Form Mahasiswa</p>
-                </a>
-              </li>
+              <?php if ($this->session->userdata('ROLE') == 'ADMIN') { ?>
+                <li class="nav-item">
+                  <a href="<?= base_url() ?>index.php/mahasiswa/create" class="nav-link">
+                    <i class="far fa-circle nav-icon text-warning"></i>
+                    <p>Form Mahasiswa</p>
+                  </a>
+                </li>
+              <?php } ?>
             </ul>
           </li>
           <li class="nav-item">

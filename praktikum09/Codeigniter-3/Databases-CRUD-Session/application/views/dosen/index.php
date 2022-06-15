@@ -32,12 +32,16 @@
                              <thead class="thead-dark align-center">
                                  <tr>
                                      <th style="vertical-align: middle;">No</th>
-                                     <th style="vertical-align: middle;">NIDN</th>
+                                     <?php if ($this->session->userdata('ROLE') == 'ADMIN') { ?>
+                                         <th style="vertical-align: middle;">NIDN</th>
+                                     <?php } ?>
                                      <th style="vertical-align: middle;">Nama</th>
                                      <th style="vertical-align: middle;">Jenis Kelamin</th>
-                                     <th style="vertical-align: middle;">Tempat Lahir</th>
-                                     <th style="vertical-align: middle;">Tanggal Lahir</th>
-                                     <th style="vertical-align: middle;">Pendidikan Terakhir</th>
+                                     <?php if ($this->session->userdata('ROLE') == 'ADMIN') { ?>
+                                         <th style="vertical-align: middle;">Tempat Lahir</th>
+                                         <th style="vertical-align: middle;">Tanggal Lahir</th>
+                                         <th style="vertical-align: middle;">Pendidikan Terakhir</th>
+                                     <?php } ?>
                                      <th style="vertical-align: middle;">Prodi</th>
                                  </tr>
                              </thead>
@@ -46,12 +50,16 @@
                                  <?php foreach ($list_dosen as $dsn) : ?>
                                      <tr>
                                          <td style="vertical-align: middle;"><?= $nomor++ ?></td>
-                                         <td style="vertical-align: middle;"><?= $dsn->nidn ?></td>
+                                         <?php if ($this->session->userdata('ROLE') == 'ADMIN') { ?>
+                                             <td style="vertical-align: middle;"><?= $dsn->nidn ?></td>
+                                         <?php } ?>
                                          <td style="vertical-align: middle;"><?= $dsn->nama ?></td>
                                          <td class="text-center" style="vertical-align: middle;"><?= $dsn->gender ?></td>
-                                         <td class="text-center" style="vertical-align: middle;"><?= $dsn->tmp_lahir ?></td>
-                                         <td class="text-center" style="vertical-align: middle;"><?= $dsn->tgl_lahir ?></td>
-                                         <td style="vertical-align: middle;"><?= $dsn->pendidikan_akhir ?></td>
+                                         <?php if ($this->session->userdata('ROLE') == 'ADMIN') { ?>
+                                             <td class="text-center" style="vertical-align: middle;"><?= $dsn->tmp_lahir ?></td>
+                                             <td class="text-center" style="vertical-align: middle;"><?= $dsn->tgl_lahir ?></td>
+                                             <td style="vertical-align: middle;"><?= $dsn->pendidikan_akhir ?></td>
+                                         <?php } ?>
                                          <td style="vertical-align: middle;"><?= $dsn->prodi_kode ?></td>
                                      </tr>
                                  <?php endforeach ?>
