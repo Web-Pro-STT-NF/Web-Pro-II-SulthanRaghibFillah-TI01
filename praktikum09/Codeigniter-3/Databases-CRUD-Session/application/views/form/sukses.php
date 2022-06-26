@@ -4,7 +4,7 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Login</title>
+   <title>Sukses</title>
 
    <!-- Icon Title -->
    <link rel="icon" href="<?= base_url() ?>public/dist/img/rafii-user.jpg" type="image/icon type">
@@ -16,13 +16,14 @@
    <link rel="stylesheet" href="<?= base_url() ?>public/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
    <!-- Theme style -->
    <link rel="stylesheet" href="<?= base_url() ?>public/dist/css/adminlte.min.css">
-   <!-- link Icon Fontawesome -->
+   <!-- Icon Fontawesome -->
    <script src="https://kit.fontawesome.com/a388e38538.js" crossorigin="anonymous"></script>
+
+   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
    <!-- Hover.css -->
    <link rel="stylesheet" href="<?= base_url() ?>public/dist/css/Hover.css">
    <!-- Magic.css -->
    <link rel="stylesheet" href="<?= base_url() ?>public/dist/css/magic.css">
-
    <style>
       body {
          background-image: url("<?= base_url() ?>public/dist/img/login.jpg");
@@ -56,59 +57,14 @@
       <!-- /.login-logo -->
       <div class="card card-outline card-primary bg-transparant">
          <div class="card-header text-center ">
-            <h1><b>Welcome</b></h1>
+            <h1><b>Pendaftaran Berhasil</b></h1>
          </div>
       </div>
       <div class="card">
          <div class="card-body login-card-body">
-            <p class="login-box-msg">Silahkan Masukkan <br>Username dan Password Anda</p>
-
-            <?= form_open('login/otentikasi') ?>
-            <div class="input-group mb-3">
-               <input type="text" class="form-control" placeholder="Username" name="username">
-               <div class="input-group-append">
-                  <div class="input-group-text">
-                     <span><i class="fa-solid fa-user"></i></span>
-                  </div>
-               </div>
-            </div>
-            <div class="input-group mb-3">
-               <input type="password" class="form-control" placeholder="Password" name="password">
-               <div class="input-group-append">
-                  <div class="input-group-text">
-                     <span class="fas fa-lock"></span>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-8">
-                  <div class="icheck-primary">
-                     <input type="checkbox" id="remember">
-                     <label for="remember">
-                        Remember Me
-                     </label>
-                  </div>
-               </div>
-               <!-- /.col -->
-               <div class="col-4">
-                  <button type="submit" class="btn btn-primary btn-block hvr-float-shadow">Masuk</button>
-               </div>
-               <!-- /.col -->
-            </div>
-            <?= form_close() ?>
-
-            <div class="social-auth-links text-center mt-2 mb-3">
-               <a href="#" class="btn btn-block btn-primary">
-                  <i class="fab fa-facebook mr-2"></i> Masuk dengan Facebook
-               </a>
-               <a href="#" class="btn btn-block btn-danger">
-                  <i class="fab fa-google-plus mr-2"></i> Masuk dengan Google+
-               </a>
-            </div>
-            <!-- /.social-auth-links -->
-            <p class="mb-0 text-right" style="color: red;">
-               <b>belum memiliki akun? <a href="<?= base_url() ?>index.php/register" class="text-right hvr-underline-from-center mb-1">Daftar Baru</a></b>
-            </p>
+            <h5 class="mb-0 text-center" style="color: red;">
+               <b> Silahkan <a href="<?= base_url() ?>index.php/login" class="text-right hvr-pulse-shrink mb-1">Login Disini!</a></b>
+            </h5>
          </div>
          <!-- /.card-body -->
       </div>

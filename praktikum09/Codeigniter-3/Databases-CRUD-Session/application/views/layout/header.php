@@ -26,6 +26,9 @@ if (!$this->session->has_userdata('USERNAME')) {
   <link rel="stylesheet" href="<?= base_url() ?>public/plugins/overlayScrollbars/css/OverlayScrollbars.min.css" />
   <!-- link Icon Fontawesome -->
   <script src="https://kit.fontawesome.com/a388e38538.js" crossorigin="anonymous"></script>
+  <!-- Hover.css -->
+  <link rel="stylesheet" href="<?= base_url() ?>public/dist/css/Hover.css">
+  
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -85,7 +88,7 @@ if (!$this->session->has_userdata('USERNAME')) {
             <i class="fas fa-th-large"></i>
           </a>
         </li>
-        <a role="button" class="btn btn-outline-primary" href="<?= base_url() ?>index.php/login/logout">
+        <a role="button" class="btn btn-outline-primary hvr-buzz" href="<?= base_url() ?>index.php/login/logout">
           <i class="fa-solid fa-right-from-bracket pr-1"></i>Logout
         </a>
       </ul>

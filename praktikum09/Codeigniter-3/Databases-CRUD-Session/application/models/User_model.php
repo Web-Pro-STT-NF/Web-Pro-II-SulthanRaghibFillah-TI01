@@ -12,8 +12,8 @@ class User_model extends CI_Model
 
    public function findUserById($id)
    {
-      // select * from user where id = $id;
-      $this->db->where('id', $id);
+      // select * from user where username = $id;
+      $this->db->where('username', $id);
       $query = $this->db->get($this->table_user);
       return $query->row();
    }
@@ -25,5 +25,12 @@ class User_model extends CI_Model
       $data = [$username, $password];
       $query = $this->db->query($sql, $data);
       return $query->row();
+   }
+
+   public function save($data)
+   {
+      $sql = "INSERT INTO user (id, username, password, email, role, created_at, last_login) VALUES (?, ?, md5(?), ?, ?, ?, ?)";
+
+      $this->db->query($sql, $data);
    }
 }
