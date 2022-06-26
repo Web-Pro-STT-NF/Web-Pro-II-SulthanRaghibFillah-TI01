@@ -73,7 +73,7 @@ class Mahasiswa extends CI_Controller
             $this->mahasiswa->save($data_mhs);
         }
 
-        redirect(base_url() . 'index.php/mahasiswa/detail?id=' . $nim, 'refresh');
+        redirect(base_url() . 'mahasiswa/detail?id=' . $nim, 'refresh');
     }
 
     public function edit()
@@ -101,6 +101,6 @@ class Mahasiswa extends CI_Controller
 
         $this->mahasiswa->delete($id);
 
-        redirect(base_url() . 'index.php/mahasiswa/index', 'refresh');
+        redirect(base_url() . 'mahasiswa/index', 'refresh');
     }
 }

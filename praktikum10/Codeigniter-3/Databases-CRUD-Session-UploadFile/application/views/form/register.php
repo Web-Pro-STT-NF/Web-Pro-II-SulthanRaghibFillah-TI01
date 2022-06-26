@@ -220,7 +220,7 @@
             <?= form_close() ?>
             <b>
                <p class="mb-0 text-right" style="color: red;">
-                  sudah memiliki akun? <a href="<?= base_url() ?>index.php/login" class="text-right  hvr-underline-from-center mb-1">Login Disini</a>
+                  sudah memiliki akun? <a href="<?= base_url() ?>login" class="text-right  hvr-underline-from-center mb-1">Login Disini</a>
                </p>
             </b>
          </div>

@@ -58,7 +58,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url() ?>index.php/dashboard/adminlte" class="nav-link">
+                <a href="<?= base_url() ?>dashboard/adminlte" class="nav-link">
                   <i class="far fa-circle nav-icon text-danger"></i>
                   <p>AdminLTE 3.1.0</p>
                 </a>
@@ -75,14 +75,14 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= base_url() ?>index.php/mahasiswa/index" class="nav-link">
+                <a href="<?= base_url() ?>mahasiswa/index" class="nav-link">
                   <i class="far fa-solid fa-database nav-icon text-info"></i>
                   <p>Mahasiswa</p>
                 </a>
               </li>
               <?php if ($this->session->userdata('ROLE') == 'ADMIN') { ?>
                 <li class="nav-item">
-                  <a href="<?= base_url() ?>index.php/mahasiswa/create" class="nav-link">
+                  <a href="<?= base_url() ?>mahasiswa/create" class="nav-link">
                     <i class="far fa-circle nav-icon text-warning"></i>
                     <p>Form Mahasiswa</p>
                   </a>
@@ -100,7 +100,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= base_url() ?>index.php/prodi/index" class="nav-link">
+                <a href="<?= base_url() ?>prodi/index" class="nav-link">
                   <i class="far fa-solid fa-database nav-icon text-info"></i>
                   <p>Prodi</p>
                 </a>
@@ -117,7 +117,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= base_url() ?>index.php/dosen/index" class="nav-link">
+                <a href="<?= base_url() ?>dosen/index" class="nav-link">
                   <i class="far fa-solid fa-database nav-icon text-info"></i>
                   <p>Dosen</p>
                 </a>

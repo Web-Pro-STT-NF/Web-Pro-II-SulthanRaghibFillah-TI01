@@ -63,7 +63,7 @@
       <div class="card">
          <div class="card-body login-card-body">
             <h5 class="mb-0 text-center" style="color: red;">
-               <b> Silahkan <a href="<?= base_url() ?>index.php/login" class="text-right hvr-pulse-shrink mb-1">Login Disini!</a></b>
+               <b> Silahkan <a href="<?= base_url() ?>login" class="text-right hvr-pulse-shrink mb-1">Login Disini!</a></b>
             </h5>
          </div>
          <!-- /.card-body -->

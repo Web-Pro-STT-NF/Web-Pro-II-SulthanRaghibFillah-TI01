@@ -107,7 +107,7 @@
             </div>
             <!-- /.social-auth-links -->
             <p class="mb-0 text-right" style="color: red;">
-               <b>belum memiliki akun? <a href="<?= base_url() ?>index.php/register" class="text-right hvr-underline-from-center mb-1">Daftar Baru</a></b>
+               <b>belum memiliki akun? <a href="<?= base_url() ?>register" class="text-right hvr-underline-from-center mb-1">Daftar Baru</a></b>
             </p>
          </div>
          <!-- /.card-body -->

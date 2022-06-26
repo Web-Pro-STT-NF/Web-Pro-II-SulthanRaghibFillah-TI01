@@ -28,11 +28,11 @@ class Login extends CI_Controller
             $this->session->set_userdata('ROLE', $row->role);
             $this->session->set_userdata('USER', $row);
 
-            redirect(base_url() . 'index.php/mahasiswa/index');
+            redirect(base_url() . 'mahasiswa/index');
             
         } else {
             // jika user tidak ada (username password salah)
-            redirect(base_url() . 'index.php/login?status=gagal');
+            redirect(base_url() . 'login?status=gagal');
         }
     }
 
@@ -42,6 +42,6 @@ class Login extends CI_Controller
         $this->session->unset_userdata('ROLE');
         $this->session->unset_userdata('USER');
 
-        redirect(base_url().'index.php/home');
+        redirect(base_url().'home');
     }
 }

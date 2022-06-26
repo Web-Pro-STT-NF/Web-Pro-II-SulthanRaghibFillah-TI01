@@ -1,7 +1,7 @@
 <?php
 if (!$this->session->has_userdata('USERNAME')) {
   // dipaksa ke home
-  redirect(base_url() . 'index.php/home');
+  redirect(base_url() . 'home');
 }
 ?>
 <!DOCTYPE html>
@@ -88,7 +88,7 @@ if (!$this->session->has_userdata('USERNAME')) {
             <i class="fas fa-th-large"></i>
           </a>
         </li>
-        <a role="button" class="btn btn-outline-primary hvr-buzz" href="<?= base_url() ?>index.php/login/logout">
+        <a role="button" class="btn btn-outline-primary hvr-buzz" href="<?= base_url() ?>login/logout">
           <i class="fa-solid fa-right-from-bracket pr-1"></i>Logout
         </a>
       </ul>

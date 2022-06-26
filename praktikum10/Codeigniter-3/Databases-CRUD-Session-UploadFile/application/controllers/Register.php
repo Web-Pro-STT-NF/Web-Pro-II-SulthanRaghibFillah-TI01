@@ -34,7 +34,7 @@ class Register extends CI_Controller
 
       $this->user->save($data_user);
 
-      redirect(base_url() . 'index.php/register/sukses?username=' . $username, 'refresh');
+      redirect(base_url() . 'register/sukses?username=' . $username, 'refresh');
    }
 
    public function sukses()

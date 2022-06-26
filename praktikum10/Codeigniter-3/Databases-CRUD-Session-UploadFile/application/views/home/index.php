@@ -76,7 +76,7 @@
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="nav-link scrollto" href="<?= base_url() . 'index.php/login' ?>"><b>LOGIN</b></a></li>
+          <li><a class="nav-link scrollto" href="<?= base_url() . 'login' ?>"><b>LOGIN</b></a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
