@@ -42,6 +42,6 @@ class Login extends CI_Controller
         $this->session->unset_userdata('ROLE');
         $this->session->unset_userdata('USER');
 
-        redirect(base_url().'index.php/login');
+        redirect(base_url().'index.php/home');
     }
 }

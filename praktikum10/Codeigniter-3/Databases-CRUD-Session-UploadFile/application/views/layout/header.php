@@ -1,7 +1,7 @@
 <?php
 if (!$this->session->has_userdata('USERNAME')) {
-  // diwajibkan login dahulu
-  redirect(base_url() . 'index.php/login');
+  // dipaksa ke home
+  redirect(base_url() . 'index.php/home');
 }
 ?>
 <!DOCTYPE html>
