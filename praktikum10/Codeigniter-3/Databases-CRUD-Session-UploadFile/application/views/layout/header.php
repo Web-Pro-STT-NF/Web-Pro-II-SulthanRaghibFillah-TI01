@@ -28,11 +28,20 @@ if (!$this->session->has_userdata('USERNAME')) {
   <script src="https://kit.fontawesome.com/a388e38538.js" crossorigin="anonymous"></script>
   <!-- Hover.css -->
   <link rel="stylesheet" href="<?= base_url() ?>public/dist/css/Hover.css">
-  
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-
+  <script>
+    $(document).ready(function() {
+      $('.nav-link').click(function() {
+        $('.nav-link').removeClass('active');
+        $(this).addClass('active');
+      });
+    });    
+  </script>
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__wobble img-circle" src="<?= base_url() ?>public/dist/img/rafii-user.jpg" alt="RafiiYuukiLogo" height="60" width="60">
