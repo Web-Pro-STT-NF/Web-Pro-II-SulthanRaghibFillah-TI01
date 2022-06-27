@@ -31,37 +31,68 @@
                 <div class="col-12">
                    <h2>Biodata</h2>
                 </div>
-                <div class="col-12 table-responsive">
-                   <table>
+                <div class="col-8 table-responsive">
+                   <table class="table table-hover table-bordered">
                       <tr>
-                         <td style="padding-right: 6rem;">NIM</td>
-                         <td>: <?= $mahasiswa->nim ?></td>
+                         <td><b>NIM</b></td>
+                         <td><?= $mahasiswa->nim ?></td>
                       </tr>
                       <tr>
-                         <td>Nama</td>
-                         <td>: <?= ucwords($mahasiswa->nama) ?></td>
+                         <td><b>Nama</b></td>
+                         <td><?= ucwords($mahasiswa->nama) ?></td>
                       </tr>
                       <tr>
-                         <td>Jenis Kelamin</td>
-                         <td>: <?= $mahasiswa->gender ?></td>
+                         <td><b>Jenis Kelamin</b></td>
+                         <td><?= $mahasiswa->gender ?></td>
                       </tr>
                       <tr>
-                         <td>Tempat Lahir</td>
-                         <td>: <?= ucwords($mahasiswa->tmp_lahir) ?></td>
+                         <td><b>Tempat Lahir</b></td>
+                         <td><?= ucwords($mahasiswa->tmp_lahir) ?></td>
                       </tr>
                       <tr>
-                         <td>Tanggal Lahir</td>
-                         <td>: <?= $mahasiswa->tgl_lahir ?></td>
+                         <td><b>Tanggal Lahir</b></td>
+                         <td><?= $mahasiswa->tgl_lahir ?></td>
                       </tr>
                       <tr>
-                         <td>Prodi</td>
-                         <td >: <?= $mahasiswa->prodi_kode ?></td>
+                         <td><b>Prodi</b></td>
+                         <td><?= $mahasiswa->prodi_kode ?></td>
                       </tr>
                       <tr>
-                         <td>IPK</td>
-                         <td >: <?= '<b>' . $mahasiswa->ipk . '</b>' ?></td>
+                         <td><b>IPK</b></td>
+                         <td><?= '<b>' . $mahasiswa->ipk . '</b>' ?></td>
                       </tr>
                    </table>
+                </div>
+                <div class="col-4 text-center">
+                   <?php echo form_open_multipart('mahasiswa/upload') ?>
+
+                   <input type="hidden" name="nim" value="<?= $mahasiswa->nim ?>">
+
+                   <?php
+                     $img = base_url('/uploads/' . $mahasiswa->foto);
+                     // $array = get_headers($img);
+                     // $string = $array[0];
+
+                     // if (strpos($string, "200")) {
+                     //    echo '<img src="' . $img . '" alt="foto" width="100%"/>';
+                     // } else {
+                     //    echo '<img src="' . base_url("/uploads/no-img.jpg") . '" alt="foto" width="100%"/>';
+                     // }
+                     if ($mahasiswa->foto == null) {
+                        echo '<img src="' . base_url("/uploads/no-img.jpg") . '" alt="foto" width="100%"/>';
+                        echo '<input type="file" name="fotomhs" class="btn btn-info mt-2">';
+                        echo '<button class="btn btn-info mt-2" type="submit"><i class="fa-solid fa-image mr-2"></i>Upload Foto</button>';
+                     } else {
+                        echo '<img src="' . $img . '" alt="foto" width="100%"/>';
+                     }
+                     ?>
+                   <!-- <br> -->
+                   <!-- Nama File <?= $mahasiswa->foto ?> -->
+                   <!-- <br> -->
+                   <!-- <input type="file" name="fotomhs" class="btn btn-info"> -->
+                   <!-- <button class="btn btn-info mt-2" type="submit"><i class="fa-solid fa-image mr-2"></i>Upload Foto</button> -->
+
+                   <?php echo form_close() ?>
                 </div>
              </div>
              <!-- /.card-body -->

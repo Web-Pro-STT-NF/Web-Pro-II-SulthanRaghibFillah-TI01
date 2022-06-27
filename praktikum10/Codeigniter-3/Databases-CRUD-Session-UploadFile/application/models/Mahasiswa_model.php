@@ -52,4 +52,10 @@ class Mahasiswa_model extends CI_Model
         $predikat = ($this->ipk >= 3.75) ? "Cumlaude" : "Baik";
         return $predikat;
     }
+
+    public function upload_foto($array)
+    {
+        $sql = "UPDATE mahasiswa SET foto=? WHERE nim=?";
+        $this->db->query($sql, $array);
+    }
 }

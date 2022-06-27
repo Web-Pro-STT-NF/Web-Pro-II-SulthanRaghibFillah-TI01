@@ -103,4 +103,34 @@ class Mahasiswa extends CI_Controller
 
         redirect(base_url() . 'mahasiswa/index', 'refresh');
     }
+
+    public function upload()
+    {
+        $config['upload_path']      = './uploads/';
+        $config['allowed_types']    = '*';
+        $config['max_size']         = 10024;
+        $config['max_width']        = 6000;
+        $config['max_height']       = 6000;
+
+        $nim = $this->input->post('nim');
+        $array = explode('.', $_FILES['fotomhs']['name']);
+        $extension = end($array);
+        $new_name = $nim . '.' . $extension;
+        $config['file_name'] = $new_name;
+
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_upload('fotomhs')) {
+            $error = array('error' => $this->upload->display_errors());
+            $this->load->view('upload_form', $error);
+        } else {
+            $this->load->model('mahasiswa_model','mahasiswa');
+            $array_data[] = $new_name; // ? ke 1
+            $array_data[] = $nim; // ? ke 2
+            $this->mahasiswa->upload_foto($array_data);
+            // $data = array('upload_data' => $this->upload->data());
+            // $this->load->view('mahasiswa/detail', $data);
+        }
+        redirect(base_url() . 'mahasiswa/detail?id=' . $nim);
+    }
 }
