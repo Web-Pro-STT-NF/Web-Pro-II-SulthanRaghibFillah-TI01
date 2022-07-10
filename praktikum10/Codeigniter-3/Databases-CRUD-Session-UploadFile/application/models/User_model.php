@@ -27,6 +27,11 @@ class User_model extends CI_Model
       return $query->row();
    }
 
+   // public function input_data($data, $table)
+   // {
+   //    $this->db->insert($table, $data);
+   // }
+
    public function save($data)
    {
       $sql = "INSERT INTO user (id, username, password, email, role, created_at, last_login) VALUES (?, ?, md5(?), ?, ?, ?, ?)";

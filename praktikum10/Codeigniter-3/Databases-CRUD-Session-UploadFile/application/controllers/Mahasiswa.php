@@ -3,6 +3,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Mahasiswa extends CI_Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('Mahasiswa_model');
+    }
+
     public function index()
     {
         $data['title'] = 'Mahasiswa';
@@ -10,7 +16,7 @@ class Mahasiswa extends CI_Controller
         $this->load->model('Mahasiswa_model', 'mahasiswa');
         $list_mahasiswa = $this->mahasiswa->getAllData();
         $data['list_mahasiswa'] = $list_mahasiswa;
-
+        // $data['list_mahasiswa'] = $this->Mahasiswa_model->getAllData()->result();
         $this->load->view('layout/header', $data);
         $this->load->view('layout/sidebar');
         $this->load->view('mahasiswa/index', $data);
@@ -43,7 +49,7 @@ class Mahasiswa extends CI_Controller
 
     public function save()
     {
-        $this->load->model('mahasiswa_model', 'mahasiswa');
+        $this->load->model('Mahasiswa_model', 'mahasiswa');
 
         $nim = $this->input->post('nim');
         $nama = $this->input->post('nama');
@@ -55,25 +61,23 @@ class Mahasiswa extends CI_Controller
         //hidden field
         $idedit = $this->input->post('idedit');
 
-        $data_mhs[] = $nim; // ? 1
-        $data_mhs[] = $nama; // ? 2
-        $data_mhs[] = $gender; // ? 3
-        $data_mhs[] = $tmp_lahir; // ? 4
-        $data_mhs[] = $tgl_lahir; // ? 5
-        $data_mhs[] = $prodi; // ? 6
-        $data_mhs[] = $ipk; // ? 7
-
+        $data = array(
+            'nim'        => $nim,
+            'nama'       => $nama,
+            'gender'     => $gender,
+            'tmp_lahir'  => $tmp_lahir,
+            'tgl_lahir'  => $tgl_lahir,
+            'prodi_kode' => $prodi,
+            'ipk'        => $ipk
+        );
         if (isset($idedit)) {
-            // update data lama
-            $data_mhs[] = $idedit; // ? 8
-            $this->mahasiswa->update($data_mhs);
+            $where = array('nim' => $nim);
+            $this->Mahasiswa_model->update_data($where, $data, 'mahasiswa');
+            redirect(base_url() . 'mahasiswa/detail?id=' . $nim, 'refresh');
         } else {
-            // save data baru
-            // panggil fungsi save di model
-            $this->mahasiswa->save($data_mhs);
+            $this->Mahasiswa_model->input_data($data, 'mahasiswa');
+            redirect(base_url() . 'mahasiswa/detail?id=' . $nim, 'refresh');
         }
-
-        redirect(base_url() . 'mahasiswa/detail?id=' . $nim, 'refresh');
     }
 
     public function edit()
